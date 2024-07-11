@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const apiKey = "RwTigWznRzK33umV7LStn8A2RRjFCEN7"; // Replace with your actual API key
+    const apiKey = "6R8hHQ7tyTGvP1KkGKwIUVw8dO2q1yvU"; // Replace with your actual API key
     const form = document.getElementById("cityForm");
     const temperatureDiv = document.getElementById("temperature");
     const hourlyForecastDiv = document.getElementById("hourlyForecast");
@@ -91,7 +91,8 @@ document.addEventListener("DOMContentLoaded", function() {
             const temperature = hour.Temperature.Value;
             const weather = hour.IconPhrase;
             hourlyForecastContent += `
-                <p>${time} - Temperature: ${temperature}°C, Weather: ${weather}</p>
+                <p>${time} - Temperature: ${temperature}°C </p> 
+                <p>Weather: ${weather}</p>
             `;
         });
         hourlyForecastDiv.innerHTML = hourlyForecastContent;
@@ -125,7 +126,8 @@ document.addEventListener("DOMContentLoaded", function() {
             const nightWeather = day.Night.IconPhrase;
             dailyForecastContent += `
                 <p>${date}</p>
-                <p>Min Temperature: ${minTemperature}°C, Max Temperature: ${maxTemperature}°C</p>
+                <p>Min Temperature: ${minTemperature}°C</p>
+                <p> Max Temperature: ${maxTemperature}°C</p>
                 <p>Day Weather: ${dayWeather}</p>
                 <p>Night Weather: ${nightWeather}</p>
             `;
